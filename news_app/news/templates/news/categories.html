@@ -1,0 +1,4 @@
+{% for category in categories %}
+    <p><a href={% url "news:source_news" cat=category%}>{{category}}</a></p>
+
+{% endfor %}

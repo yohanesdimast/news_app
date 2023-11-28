@@ -1,0 +1,13 @@
+{% for source in sources %}
+    <p><a href="">{{source}}</a></p>
+{% endfor %}
+
+{% if has_prev %}
+    <a href="?page={{prev_page}}">Previous</a>
+{% endif %}
+
+<a href="?page={{page_now}}"> || Page {{page_now}} || </a>
+
+{% if has_next %}
+    <a href="?page={{next_page}}">Next</a>    
+{% endif %}
