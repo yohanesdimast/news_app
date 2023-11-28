@@ -14,6 +14,7 @@ def source(request, cat):
     page = request.GET.get('page')
     
     source_list = news.get_news_source(page)[0]
+    source_lis
     total_source = news.get_news_source(page)[1]
     
     paginate = Paginator(source_list, 20)
@@ -42,3 +43,6 @@ def source(request, cat):
                            'prev_page' : str(prev_page),
                            'has_next' : has_next,
                            'has_prev': has_prev})
+
+
+
